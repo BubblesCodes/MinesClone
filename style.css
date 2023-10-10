@@ -1,0 +1,80 @@
+body {
+    gap: 50px;
+    background-color: rgb(56, 55, 55);
+    margin: 0;
+    display: grid; 
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: auto, auto;
+    grid-template-areas:
+    "header"
+    "main";
+    justify-content: center;
+
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "setup tiles";
+    height: auto;
+}
+
+#tiles {
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* Create 5 columns */
+    grid-template-rows: repeat(5, auto); /* Create 5 rows */
+    gap: 5px;
+    background-color: rgb(53, 52, 52);
+    border: 2px solid #a31010; /* Border for grid items */
+
+}
+
+.tile {
+    height: 8vw;
+    width: 8vw;
+    min-width: 60px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6e6e6e; /* Background color for grid items */
+    border: 2px solid #a31010; /* Border for grid items */
+}
+
+
+
+#setup {
+    max-width: 200px;
+    width: 20vw;
+    height: auto;
+    color: black;
+    background-color: rgb(66, 66, 66);
+}
+
+header {
+    text-align: center;
+    height: 10vh;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
+    align-items: center; /* Vertically center items within the container */
+}
+
+button {
+    flex-grow: 1; /* Distribute available space equally among buttons */
+    border: none;
+    margin: 1px;
+}
+
+.input-container input {
+    flex-grow: 2; /* Allow the input to take up twice the amount of space */
+    width: 100%;
+}
+
+#output-message {
+    color: white;
+}
